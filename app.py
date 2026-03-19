@@ -549,6 +549,8 @@ class App(ctk.CTk):
 
         def throttled_worker(path):
             with semaphore:
+                import time
+                time.sleep(0.5)  # 500ms delay da sprecimo limitiranje ip-ja od strane purs.gov.rs promeniti na vise po potrebi
                 self._worker(None, path, on_done)
 
         self.status.show_progress(0)
