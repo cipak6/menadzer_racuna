@@ -1,0 +1,19 @@
+# PyInstaller
+build/
+dist/
+*.spec.bak
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+
+# Mac
+.DS_Store
+
+# App data
+*.db
+invoice_images/
+render_error.txt
+tmp.py

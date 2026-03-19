@@ -1,0 +1,36 @@
+name: Build Windows EXE
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install customtkinter requests beautifulsoup4 lxml openpyxl Pillow srtools pyzbar pymupdf zxing-cpp pyinstaller qrcode
+
+      - name: Check installed packages
+        run: |
+          pip list
+          python -c "import customtkinter; print(customtkinter.__file__)"
+
+      - name: Build EXE
+        run: pyinstaller racuni.spec
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Racuni-Windows
+          path: dist/Racuni/
