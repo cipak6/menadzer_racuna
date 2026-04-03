@@ -1,6 +1,6 @@
 # Bitno
 
-NISAM PROGRAMER, trebao mi je alat za određeni posao i napravio sam ga, ako može još nekome da pomogne, biće mi drago, sve je open source baš zbog toga.
+Trebao mi je alat za određeni posao i napravio sam ga, ako može još nekome da pomogne, biće mi drago, sve je open source baš zbog toga.
 Logika za parsiranje fiskalnih računa bazirana na radu [@ivang5](https://github.com/ivang5/Moji-Racuni) — hvala!
 
 # Menadžer računa
